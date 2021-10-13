@@ -70,11 +70,19 @@
       padding:6px 20px 6px 20px;
     }
     .logo{
+      position: relative;
       font-weight:900;
       font-size:40px;
-      margin-top:-20px;
-      margin-bottom:-20px;
+      margin-top:-115px;
+      margin-bottom:-120px;
       padding-left:5%;
+      z-index: 100;
+    }
+    .logo svg{
+      z-index: 10;
+      width:80px;
+      margin-left:-145px;
+      display: inherit;
     }
     .wrap-intro p{
       color:rgb(139, 157, 189);
@@ -88,7 +96,18 @@
     <div class="purple-blur"></div>
     <!-- nav bar -->
     <div class="flex nav">
-      <div class="flex-shrink w-50 logo text-left"><a>JeetStack</a></div>
+      <div class="flex-shrink w-50 logo text-left"><a>
+        Jeet &nbsp tack
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+      <defs>
+      </defs>
+      <g transform="translate(128 128) scale(0.59 0.59)" style="">
+        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(214.39158973709772 -123.77904204670517) rotate(105) scale(3.89 3.89) matrix(1 0 0 -1 0 90)" >
+        <polygon points="0,65.37 38.92,24.63 57.77,42.87 90,26.45 54.43,65.37 34.36,46.52 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,222,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+      </g>
+      </g>
+      </svg>
+      </a></div>
       <div class="flex-shrink w-10"><a>Home</a></div>
       <div class="flex-shrink w-10"><a>About Us</a></div>
       <div class="flex-shrink w-10"><a>Services</a></div>
