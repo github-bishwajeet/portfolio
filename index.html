@@ -66,7 +66,7 @@
     .logo{
       position: relative;
       font-weight:900;
-      font-size:40px;
+      font-size:30px;
       margin-top:-115px;
       margin-bottom:-120px;
       padding-left:5%;
@@ -74,8 +74,8 @@
     }
     .logo svg{
       z-index: 10;
-      width:80px;
-      margin-left:-145px;
+      width:60px;
+      margin-left:-109px;
       display: inherit;
     }
     .summary{
@@ -94,7 +94,7 @@
       filter: blur(60px);
       z-index: 1;
     }
-    .ed{
+    img{
       image-rendering:-moz-crisp-edges;          /* Firefox        */
 image-rendering:-o-crisp-edges;            /* Opera          */
 image-rendering:-webkit-optimize-contrast; /* Safari         */
@@ -117,28 +117,33 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
     <div class="purple-blur"></div>
     <div class="violet-blur"></div>
     <div class="flex w-full">
-      <div class="p-5 pt-0 text-white h-screen text-center project-exibition" style="background-color: #3c4457;width:250px;overflow-y: scroll;">
-      <h1 class="mt-3 mb-5" style="font-size: 20px;">Projects</h1>
-      <hr><br><br>
+      <div class="p-5 text-white h-screen text-center project-exibition" style="background-color: #3c4457;width:220px;overflow-y: scroll;position: relative;padding-top: 100px;">
+      <div class="text-center" style="background-color: rgb(85, 238, 141);font-size: 20px;position:fixed;top:0;left:0;width: 193px;padding:19px 0 19px 0;-webkit-mask:
+      -webkit-mask:
+    linear-gradient(red 0 0) top/100% calc(100% - 20px) no-repeat,
+    radial-gradient(circle farthest-side,#000 100%,#0000) bottom/calc(2*20px) 80px repeat-x;;
+    -webkit-mask:
+    linear-gradient(red 0 0) top/100% calc(100% - 20px) no-repeat,
+    radial-gradient(circle farthest-side,#000 98%,#0000) bottom/calc(1.85*20px) 80px repeat-x;">Projects</div>
         <div class="rounded mb-5">
           <img src="images/edustuffs.com.png" class="rounded ed" style="width:100%;">
           <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Edustuffs</h3>
         </div><br>
         <div class="rounded mb-5">
-          <img src="images/edustuffs.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Edustuffs</h3>
+          <img src="images/doutedesk.com.png" class="rounded ed" style="width:100%;">
+          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Doutedesk</h3>
         </div><br>
         <div class="rounded mb-5 mt-2">
-          <img src="images/edustuffs.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Edustuffs</h3>
+          <img src="images/ellacare.org.png" class="rounded ed" style="width:100%;">
+          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Ellacare</h3>
         </div><br>
         <div class="rounded mb-5 mt-2">
-          <img src="images/edustuffs.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Edustuffs</h3>
+          <img src="images/zodient.com.png" class="rounded ed" style="width:100%;">
+          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Zodient</h3>
         </div><br>
         <div class="rounded mb-5 mt-2">
-          <img src="images/edustuffs.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Edustuffs</h3>
+          <img src="images/mdware.org.png" class="rounded ed" style="width:100%;">
+          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Mdware</h3>
         </div>
       </div>
       <div class="w-full">
@@ -162,15 +167,17 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
     </div>
     <!-- end of nav bar -->
     <div class="w-full overflow-hidden pt-5 pl-5">
-      <div class="flex mt-5 pl-5 pt-5">
-        <div class="mt-5 pt-5 pl-5" style="width:50%;position: relative;">
-          <img src="images/plant.png" style="position: absolute;left:-25px;top:30px">
+      <div class="flex pl-5" style="margin-top:7%">
+        <div class="pl-5" style="width:50%;position: relative;margin-top:20px">
+          <img src="images/plant.png" style="position: absolute;left:-15px;top:20px">
+          <div class="pl-5">
           <h1 class="intro">Hi! I Am</h1>
           <h1 class="intro">Bishwajeet Kr.</h1>
           <p class="summary">
             Full Stack Developer is an engineer who works on both client-side and server-side of the software application.
           </p><br><br>
           <a class="contact-us">Hire me</a>
+          </div>
         </div>
         <div class="text-right" style="width:50%">
           <img src="images/bishwajeet-kumar.png" style="max-width:90%;margin-left: 10%;position: relative;z-index: 100;">
