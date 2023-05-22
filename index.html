@@ -180,13 +180,15 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
     <div class="flex w-full">
       <div class="p-5 text-white text-center project-exibition pt-0 hidden md:block" style="background-color: #3c4457;width:220px;overflow-x: hidden;overflow-y: scroll;position: relative;">
       <div class="" style="position: absolute;height:100vh">
-      <div class="text-center -ml-5" style="background-color:rgb(255, 183, 0);font-size: 18px;width: 193px;padding:19px 0 19px 0;-webkit-mask:
+      <div class="text-center -ml-5 transition-all project-label" style="width:186px;background-color:rgb(255, 183, 0);font-size: 18px;padding:19px 0 19px 0;-webkit-mask:
       -webkit-mask:
     linear-gradient(red 0 0) top/100% calc(100% - 20px) no-repeat,
     radial-gradient(circle farthest-side,#000 100%,#0000) bottom/calc(2*20px) 80px repeat-x;;
     -webkit-mask:
     linear-gradient(red 0 0) top/100% calc(100% - 20px) no-repeat,
-    radial-gradient(circle farthest-side,#000 98%,#0000) bottom/calc(1.85*20px) 80px repeat-x;position:relative;z-index:1000;text-shadow:0px 5px 8px rgba(0,0,0,0.5)">Projects</div>
+    radial-gradient(circle farthest-side,#000 98%,#0000) bottom/calc(1.85*20px) 80px repeat-x;position:fixed;z-index:2000;text-shadow:0px 5px 8px rgba(0,0,0,0.5)">Projects
+   <button class="float-right mr-4 close-project block md:hidden"><img src="https://static.thenounproject.com/png/1479017-200.png" width="25"></button>  
+  </div>
       <div class="project-inner-exibition">
           <div class="rounded mb-5">
             <a href="http://edustuffs.com" target="_blank">
@@ -258,7 +260,7 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
     </div>
     <!-- end of nav bar -->
     <div class="w-full pt-0 md:pt-5 pl-5">
-      <label class="px-2 py-1 rounded-xl bg-white fixed top-24 -left-2 pl-4 font-black text-black block md:hidden">Projects <span class="animate-spin inline-block text-sm ml-1 h-4 w-4">⭐️</span></label>
+      <label class="px-2 py-1 projects-btn rounded-xl bg-white fixed top-24 -left-2 pl-4 font-black text-black block md:hidden" style="z-index:1000">Projects <span class="animate-spin inline-block text-sm ml-1 h-4 w-4">⭐️</span></label>
       <div class="pl-5 flex-div -mt-44 md:mt-10">
         <div class="pl-5 intro-jeet" style="width:50%;position: relative;margin-top:20px">
           <img src="images/plant.png" class="plant">
@@ -281,13 +283,34 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
   <script>
    const innerItem = document.querySelector('.project-inner-exibition');
    const item = document.querySelector('.project-exibition');
+   const project = document.querySelector('.projects-btn');
+   const projectExibition = document.querySelector('.project-exibition');
+   const closeProject = document.querySelector('.close-project');
+   const projectLabel = document.querySelector('.project-label');
+
    innerItem.classList.add('slide');
    item.addEventListener('mouseover', function(){
     innerItem.classList.remove('slide');
    })
-    item.addEventListener('mouseout', function(){
-      innerItem.classList.add('slide');
+
+   item.addEventListener('mouseover', function(){
+    innerItem.classList.remove('slide');
+   })
+
+
+    project.addEventListener('click', function(){
+      projectExibition.classList.remove('hidden');
+      projectExibition.style.width="100%";
+      projectExibition.style.position="fixed";
+      projectExibition.style.height="100%";
+      projectExibition.style.zIndex="2000";
+      projectLabel.style.width="100%";
     });
+
+    closeProject.addEventListener('click', function(){
+      projectExibition.classList.add('hidden');
+    });
+
     var _img = document.querySelectorAll('.img');
     _img.forEach(function(el){
       el.addEventListener('mouseover',function(){
