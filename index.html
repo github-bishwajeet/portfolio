@@ -2,7 +2,9 @@
 <html lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Author:Bishwajeet</title>
+  <title>Bishwajeet</title>
+  <link rel="shortcut icon" href="images/bishwajeet-kumar.png">
+
   <head>
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,7 @@
   <style>
     body{
       margin:0;
+      height: 100%;
       color: rgb(255, 255, 255);
       background-color: #101123;
       font-family: 'PT Sans', sans-serif;
@@ -43,7 +46,7 @@
     }
     .nav{
       width:100%;
-      padding:20px 0px 20px 0px;
+      padding:25px 0px 30px 0px;
       text-align: center;
     }
     .nav div:nth-child(1){
@@ -109,7 +112,66 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
 .project-exibition h3{
   font-size: 14px;
 }
+.project-inner-exibition{
+  transition: all 1s;
+  background-color: #3c4457;
+}
+.slide{
+  animation: slide 15s linear infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-500px);
+  }
+  50% {
+    transform: translateY(10px); 
+  }
+  100% {
+    transform: translateY(-500px); 
+  }
+}
 
+.project-inner-exibition div{
+  cursor:pointer;
+  color:rgb(225, 225, 225);
+}
+.project-inner-exibition div h3{
+  margin-top:7px;
+}
+.project-inner-exibition div:hover{
+  color:rgb(0,222,255) !important;
+}
+.flex-div{
+  display: flex;
+  min-height: 100vh;
+}
+.plant{
+  position: absolute;left:-15px;top:20px;
+}
+@media screen and (max-width: 900px){
+  .flex-div{
+    text-align: center;
+    /* padding-left: 0 !important; */
+    width: 100%;
+    -webkit-box-orient: vertical!important;
+    -webkit-box-direction: reverse!important;
+    -ms-flex-direction: column!important;
+    flex-direction: column-reverse!important;
+}
+.intro-jeet, .jeet{
+  width : 100% !important;
+  padding-left: 0 !important;
+}
+.intro-jeet{
+  margin:0 0 0 -25px !important;
+}
+.jeet img{
+  margin:0 !important;
+}
+.plant{
+  display:none;
+}
+}
   </style>
   </head>
   
@@ -117,38 +179,70 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
     <div class="purple-blur"></div>
     <div class="violet-blur"></div>
     <div class="flex w-full">
-      <div class="p-5 text-white h-screen text-center project-exibition" style="background-color: #3c4457;width:220px;overflow-y: scroll;position: relative;padding-top: 100px;">
-      <div class="text-center" style="background-color: rgb(85, 238, 141);font-size: 20px;position:fixed;top:0;left:0;width: 193px;padding:19px 0 19px 0;-webkit-mask:
+      <div class="p-5 text-white text-center project-exibition pt-0" style="background-color: #3c4457;width:220px;overflow-x: hidden;overflow-y: scroll;position: relative;">
+      <div class="" style="position: absolute;height:100vh">
+      <div class="text-center -ml-5" style="background-color:rgb(255, 183, 0);font-size: 18px;width: 193px;padding:19px 0 19px 0;-webkit-mask:
       -webkit-mask:
     linear-gradient(red 0 0) top/100% calc(100% - 20px) no-repeat,
     radial-gradient(circle farthest-side,#000 100%,#0000) bottom/calc(2*20px) 80px repeat-x;;
     -webkit-mask:
     linear-gradient(red 0 0) top/100% calc(100% - 20px) no-repeat,
-    radial-gradient(circle farthest-side,#000 98%,#0000) bottom/calc(1.85*20px) 80px repeat-x;">Projects</div>
-        <div class="rounded mb-5">
-          <img src="images/edustuffs.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Edustuffs</h3>
+    radial-gradient(circle farthest-side,#000 98%,#0000) bottom/calc(1.85*20px) 80px repeat-x;position:relative;z-index:1000;text-shadow:0px 5px 8px rgba(0,0,0,0.5)">Projects</div>
+      <div class="project-inner-exibition">
+          <div class="rounded mb-5">
+            <a href="http://edustuffs.com" target="_blank">
+            <img src="images/edustuffs.com.png" class="rounded ed img" style="width:90%;">
+            <h3>Edustuffs <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+            </a>
+          </div><br>
+          <div class="rounded mb-5">
+            <a href="http://doutedesk.com" target="_blank">
+            <img src="images/doutedesk.com.png" class="rounded ed img" style="width:90%;">
+            <h3>Doutedesk <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+          </a>
         </div><br>
-        <div class="rounded mb-5">
-          <img src="images/doutedesk.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Doutedesk</h3>
+          <div class="rounded mb-5 mt-2">
+            <a href="http://ellacare.org" target="_blank">
+            <img src="images/ellacare.org.png" class="rounded ed img" style="width:90%;">
+            <h3>Ellacare <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+          </a>
+        </div><br>
+          <div class="rounded mb-5 mt-2">
+            <a href="http://zodient.com" target="_blank">
+            <img src="images/zodient.com.png" class="rounded ed img" style="width:90%;">
+            <h3>Zodient  <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+          </a>
+        </div><br>
+          <div class="rounded mb-5 mt-2">
+            <a href="http://mdware.org" target="_blank">
+            <img src="images/mdware.org.png" class="rounded ed img" style="width:90%;">
+            <h3>Mdware <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+          </a>
         </div><br>
         <div class="rounded mb-5 mt-2">
-          <img src="images/ellacare.org.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Ellacare</h3>
-        </div><br>
-        <div class="rounded mb-5 mt-2">
-          <img src="images/zodient.com.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Zodient</h3>
-        </div><br>
-        <div class="rounded mb-5 mt-2">
-          <img src="images/mdware.org.png" class="rounded ed" style="width:100%;">
-          <h3 style="margin-top:7px;color:rgb(225, 225, 225)">Mdware</h3>
+          <a href="https://www.simplydetailingofficial.com" target="_blank">
+          <img src="images/simply-detail.png" class="rounded ed img" style="width:90%;">
+          <h3>Simply Detail <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+        </a>
+      </div><br>
+      <div class="rounded mb-5 mt-2">
+        <a href="" target="_blank">
+        <img src="images/clean.png" class="rounded ed img" style="width:90%;">
+        <h3>Home Cleaning <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+      </a>
+    </div><br>
+    <div class="rounded mb-5 mt-2">
+      <a href="http://koirank.com" target="_blank">
+      <img src="images/koirank.png" class="rounded ed img" style="width:90%;">
+      <h3>Koirank <svg width="18" height="18" style="display:inline-block;margin:-2px 0 0 0;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="currentColor" stroke-width="1.5" fill="#3c4457" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></h3>
+    </a>
+  </div><br>
+        </div>
         </div>
       </div>
       <div class="w-full">
     <!-- nav bar -->
-    <div class="flex nav" style="border-bottom: 1px solid rgb(55, 62, 82);">
+    <div class="nav" style="border-bottom: 1px solid rgb(55, 62, 82);">
       <div class="flex-shrink w-50 logo text-left"><a>
         Jeet &nbsp tack
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
@@ -161,29 +255,45 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
       </g>
       </svg>
       </a></div>
-      <div class="flex-shrink w-10"><a href="./" style="color:orange">Home</a></div>
-      <div class="flex-shrink w-10"><a>About Us</a></div>
-      <div class="flex-shrink w-10"><a>Services</a></div>
+      <a class="rounded-3xl px-3 py-2 float-right mr-7 -mt-7" href="https://calendly.com/bishwajit-gupta/30min" target="_blank" style="background:rgb(0,222,255);color:black;">Book an Appointment</a>
     </div>
     <!-- end of nav bar -->
-    <div class="w-full overflow-hidden pt-5 pl-5">
-      <div class="flex pl-5" style="margin-top:7%">
-        <div class="pl-5" style="width:50%;position: relative;margin-top:20px">
-          <img src="images/plant.png" style="position: absolute;left:-15px;top:20px">
+    <div class="w-full pt-5 pl-5">
+      <div class="pl-5 flex-div" style="margin-top:7%">
+        <div class="pl-5 intro-jeet" style="width:50%;position: relative;margin-top:20px">
+          <img src="images/plant.png" class="plant">
           <div class="pl-5">
           <h1 class="intro">Hi! I Am</h1>
           <h1 class="intro">Bishwajeet Kr.</h1>
           <p class="summary">
             Full Stack Developer is an engineer who works on both client-side and server-side of the software application.
           </p><br><br>
-          <a class="contact-us">Hire me</a>
+          <a href="https://api.whatsapp.com/send?phone=+918847606243&text=Hey Bishwajeet, we're looking for a fullstack engineer to join with us. Let me know if you're available for a quick call!" class="contact-us transition hover:bg-white hover:text-black">Hire me</a>
           </div>
         </div>
-        <div class="text-right" style="width:50%">
+        <div class="text-right jeet" style="width:50%">
           <img src="images/bishwajeet-kumar.png" style="max-width:90%;margin-left: 10%;position: relative;z-index: 100;">
         </div>
       </div>
     </div>
     </div>
   </body>
+  <script>
+   const innerItem = document.querySelector('.project-inner-exibition');
+   const item = document.querySelector('.project-exibition');
+   innerItem.classList.add('slide');
+   item.addEventListener('mouseover', function(){
+    innerItem.classList.remove('slide');
+   })
+    item.addEventListener('mouseout', function(){
+      innerItem.classList.add('slide');
+    });
+    var _img = document.querySelectorAll('.img');
+    _img.forEach(function(el){
+      el.addEventListener('mouseover',function(){
+        
+      });
+    });
+
+  </script>
 </html>
