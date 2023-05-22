@@ -23,9 +23,7 @@
     }
     .intro{
       font-weight:900;
-      font-size:3em;
       letter-spacing: 1px;
-      line-height: 65px;
     }
     .intro:nth-child(2){
       color:rgb(255, 183, 0)
@@ -47,7 +45,7 @@
     }
     .nav{
       width:100%;
-      padding:25px 0px 30px 0px;
+      padding:25px 0px 25px 0px;
       text-align: center;
     }
     .nav div:nth-child(1){
@@ -180,7 +178,7 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
     <div class="purple-blur"></div>
     <div class="violet-blur"></div>
     <div class="flex w-full">
-      <div class="p-5 text-white text-center project-exibition pt-0" style="background-color: #3c4457;width:220px;overflow-x: hidden;overflow-y: scroll;position: relative;">
+      <div class="p-5 text-white text-center project-exibition pt-0 hidden md:block" style="background-color: #3c4457;width:220px;overflow-x: hidden;overflow-y: scroll;position: relative;">
       <div class="" style="position: absolute;height:100vh">
       <div class="text-center -ml-5" style="background-color:rgb(255, 183, 0);font-size: 18px;width: 193px;padding:19px 0 19px 0;-webkit-mask:
       -webkit-mask:
@@ -243,7 +241,7 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
       </div>
       <div class="w-full">
     <!-- nav bar -->
-    <div class="nav" style="border-bottom: 1px solid rgb(55, 62, 82);">
+    <div class="nav overflow-hidden" style="border-bottom: 1px solid rgb(55, 62, 82);">
       <div class="flex-shrink w-50 logo text-left"><a>
         Jeet &nbsp tack
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
@@ -256,16 +254,16 @@ image-rendering:optimize-contrast;         /* CSS3 Proposed  */
       </g>
       </svg>
       </a></div>
-      <a class="rounded-3xl px-3 py-2 float-right mr-7 -mt-7" href="https://calendly.com/bishwajit-gupta/30min" target="_blank" style="background:rgb(0,222,255);color:black;">Book an Appointment</a>
+      <a class="rounded-3xl px-3 py-2 float-right mr-4 md:mr-7 -mt-7 md:-mt-6 text-sm md:text-md" href="https://calendly.com/bishwajit-gupta/30min" target="_blank" style="background:rgb(0,222,255);color:black;">Book an Appointment</a>
     </div>
     <!-- end of nav bar -->
-    <div class="w-full pt-5 pl-5">
-      <div class="pl-5 flex-div" style="margin-top:7%">
+    <div class="w-full pt-0 md:pt-5 pl-5">
+      <div class="pl-5 flex-div -mt-36 md:mt-10">
         <div class="pl-5 intro-jeet" style="width:50%;position: relative;margin-top:20px">
           <img src="images/plant.png" class="plant">
-          <div class="pl-5">
-          <h1 class="intro">Hi! I Am</h1>
-          <h1 class="intro">Bishwajeet Kr.</h1>
+          <div class="pl-5 pt-0 md:pt-2">
+          <h1 class="intro text-2xl md:text-4xl my-4 md:my-5">Hi! I Am</h1>
+          <h1 class="intro text-4xl md:text-5xl mb-8">Bishwajeet Kr.</h1>
           <p class="summary">
             I'm a <strong class="text-white">Senior Fullstack Engineer</strong> <a class="text-blue-500" href="https://thecodework.com">@TheCodeWork</a> with over 4 years of experience in fullstack development.
           </p><br><br>
