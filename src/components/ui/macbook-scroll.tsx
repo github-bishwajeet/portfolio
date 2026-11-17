@@ -41,80 +41,101 @@ export const MacbookScroll = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    // Start while MacBook is still below the fixed nav + promo banner
-    offset: ["start 0.7", "end 0.35"],
+    // Hold closed until the MacBook reaches mid-viewport, then open through the sticky range
+    offset: ["start center", "end 0.2"],
   });
 
   const [isMobile, setIsMobile] = useState(false);
+  const [mobileScale, setMobileScale] = useState(1);
 
   useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
-    }
+    const update = () => {
+      const width = window.innerWidth;
+      const mobile = width < 768;
+      setIsMobile(mobile);
+      // ~70% viewport width on phones — readable, not edge-to-edge
+      if (mobile) {
+        setMobileScale(Math.min(0.62, (width - 72) / 512));
+      } else {
+        setMobileScale(1);
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   const scaleX = useTransform(
     scrollYProgress,
-    [0, 0.35],
+    [0, 0.45],
     [1.2, isMobile ? 1 : 1.35],
   );
   const scaleY = useTransform(
     scrollYProgress,
-    [0, 0.35],
+    [0, 0.45],
     [0.6, isMobile ? 1 : 1.35],
   );
   // Keep lid mostly in place so it doesn't fly under the fixed header / get clipped
-  const translate = useTransform(scrollYProgress, [0, 0.5], [0, 40]);
-  const rotate = useTransform(scrollYProgress, [0.05, 0.08, 0.35], [-28, -28, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
+  const translate = useTransform(scrollYProgress, [0, 0.6], [0, 40]);
+  const rotate = useTransform(scrollYProgress, [0, 0.12, 0.45], [-28, -28, 0]);
+  const textTransform = useTransform(scrollYProgress, [0, 0.35], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
-    <div ref={ref} className="relative min-h-[170vh]">
-      <div className="sticky top-[6.5rem] flex scale-[0.35] transform flex-col items-center justify-start overflow-visible py-6 [perspective:800px] sm:scale-50 md:scale-100 md:pt-16 md:pb-10">
-        {title ? (
-          <motion.h2
-            style={{
-              translateY: textTransform,
-              opacity: textOpacity,
-            }}
-            className="mb-12 text-center text-3xl font-bold text-neutral-800 dark:text-white"
-          >
-            {title}
-          </motion.h2>
-        ) : null}
-        {/* Lid */}
-        <Lid
-          src={src}
-          screen={screen}
-          scaleX={scaleX}
-          scaleY={scaleY}
-          rotate={rotate}
-          translate={translate}
-        />
-        {/* Base area */}
-        <div className="relative -z-10 h-[22rem] w-[32rem] overflow-hidden rounded-2xl bg-gray-200 dark:bg-[#272729]">
-          {/* above keyboard bar */}
-          <div className="relative h-10 w-full">
-            <div className="absolute inset-x-0 mx-auto h-4 w-[80%] bg-[#050505]" />
+    <div ref={ref} className="relative min-h-[170vh] overflow-x-clip">
+      <div className="sticky top-[6.5rem] flex w-full justify-center overflow-visible py-4 [perspective:800px] md:pt-16 md:pb-10">
+        <div
+          className="flex origin-top flex-col items-center justify-start will-change-transform"
+          style={{
+            transform: `scale(${mobileScale})`,
+            // Collapse unused layout space created by CSS scale on small screens
+            marginBottom: isMobile ? `${(1 - mobileScale) * -520}px` : undefined,
+          }}
+        >
+          {title ? (
+            <motion.h2
+              style={{
+                translateY: textTransform,
+                opacity: textOpacity,
+              }}
+              className="mb-12 text-center text-3xl font-bold text-neutral-800 dark:text-white"
+            >
+              {title}
+            </motion.h2>
+          ) : null}
+          {/* Lid */}
+          <Lid
+            src={src}
+            screen={screen}
+            scaleX={scaleX}
+            scaleY={scaleY}
+            rotate={rotate}
+            translate={translate}
+          />
+          {/* Base area */}
+          <div className="relative -z-10 h-[22rem] w-[32rem] overflow-hidden rounded-2xl bg-gray-200 dark:bg-[#272729]">
+            {/* above keyboard bar */}
+            <div className="relative h-10 w-full">
+              <div className="absolute inset-x-0 mx-auto h-4 w-[80%] bg-[#050505]" />
+            </div>
+            <div className="relative flex">
+              <div className="mx-auto h-full w-[10%] overflow-hidden">
+                <SpeakerGrid />
+              </div>
+              <div className="mx-auto h-full w-[80%]">
+                <Keypad />
+              </div>
+              <div className="mx-auto h-full w-[10%] overflow-hidden">
+                <SpeakerGrid />
+              </div>
+            </div>
+            <Trackpad />
+            <div className="absolute inset-x-0 bottom-0 mx-auto h-2 w-20 rounded-tl-3xl rounded-tr-3xl bg-gradient-to-t from-[#272729] to-[#050505]" />
+            {showGradient && (
+              <div className="absolute inset-x-0 bottom-0 z-50 h-40 w-full bg-gradient-to-t from-white via-white to-transparent dark:from-black dark:via-black"></div>
+            )}
+            {badge && <div className="absolute bottom-4 left-4">{badge}</div>}
           </div>
-          <div className="relative flex">
-            <div className="mx-auto h-full w-[10%] overflow-hidden">
-              <SpeakerGrid />
-            </div>
-            <div className="mx-auto h-full w-[80%]">
-              <Keypad />
-            </div>
-            <div className="mx-auto h-full w-[10%] overflow-hidden">
-              <SpeakerGrid />
-            </div>
-          </div>
-          <Trackpad />
-          <div className="absolute inset-x-0 bottom-0 mx-auto h-2 w-20 rounded-tl-3xl rounded-tr-3xl bg-gradient-to-t from-[#272729] to-[#050505]" />
-          {showGradient && (
-            <div className="absolute inset-x-0 bottom-0 z-50 h-40 w-full bg-gradient-to-t from-white via-white to-transparent dark:from-black dark:via-black"></div>
-          )}
-          {badge && <div className="absolute bottom-4 left-4">{badge}</div>}
         </div>
       </div>
     </div>
