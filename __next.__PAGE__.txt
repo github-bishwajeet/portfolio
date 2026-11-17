@@ -1,0 +1,31 @@
+1:"$Sreact.fragment"
+2:"/portfolio/_next/static/chunks/1ua2kfq9s-me6.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+8:"/portfolio/_next/static/chunks/2apw78y74nsh9.js"
+9:I[50883,["$2","$8"],"SiteNav"]
+a:I[42808,["$2","$8"],"Hero"]
+b:I[56444,["$2","$8"],"Work"]
+c:I[9374,["$2","$8"],"SkillsHub"]
+d:I[45177,["$2","$8"],"Experience"]
+e:I[50666,["$2","$8"],"About"]
+f:I[77358,["$2","$8"],"Contact"]
+10:I[97367,["$2"],"OutletBoundary"]
+11:"$Sreact.suspense"
+14:"ViewportBoundary"
+15:I[97367,["$2"],"$14"]
+16:"MetadataBoundary"
+17:I[97367,["$2"],"$16"]
+18:I[27201,["$2"],"IconMark"]
+:HL["/portfolio/_next/static/chunks/2eu4mdv__erru.css","style"]
+6:X
+7:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","main",null,{"className":"relative min-h-screen bg-white","children":[["$","$L9",null,{}],["$","div",null,{"className":"fixed inset-x-0 top-12 z-40 bg-[#0071e3]","children":["$","p",null,{"className":"mx-auto flex min-h-10 max-w-[980px] flex-wrap items-center justify-center gap-x-1.5 px-5 py-2.5 text-center text-[12px] leading-snug text-white md:text-[14px]","children":[["$","span",null,{"className":"md:hidden","style":{"wordSpacing":"0.18em"},"children":"Building AI systems at Studio Jadu. Open to senior roles."}],["$","span",null,{"className":"hidden md:inline","style":{"wordSpacing":"0.22em"},"children":"Building distributed AI pipelines and queued media systems at Studio Jadu. Open to senior fullstack roles."}],["$","a",null,{"href":"#contact","className":"inline-flex shrink-0 items-center gap-0.5 whitespace-nowrap font-normal text-white underline underline-offset-2","children":["Get in touch",["$","span",null,{"aria-hidden":true,"children":"›"}]]}]]}]}],["$","$La",null,{}],["$","$Lb",null,{}],["$","$Lc",null,{}],["$","$Ld",null,{}],["$","$Le",null,{}],["$","$Lf",null,{}]]}],[["$","script","script-0",{"src":"/portfolio/_next/static/chunks/2apw78y74nsh9.js","async":true}]],["$","$L10",null,{"children":["$","$11",null,{"name":"Next.MetadataOutlet","children":"$@12"}]}]]}],"p":"$@13","v":null,"s":"$6"}}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/portfolio/_next/static/chunks/2eu4mdv__erru.css","precedence":"next"}],["$","script","script-0",{"src":"/portfolio/_next/static/chunks/1ua2kfq9s-me6.js","async":true}]],["$","html",null,{"lang":"en","className":"y_BAJG_variable C72cgW_variable h-full","suppressHydrationWarning":true,"children":["$","body",null,{"className":"min-h-full font-sans text-foreground","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}]}]]}],"p":"$@5","v":null,"s":"$6"},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#ffffff"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$11",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Jeet · Bishwajeet Kumar | Senior Fullstack Engineer"}],["$","meta","1",{"name":"description","content":"Jeet (Bishwajeet Kumar). Senior Fullstack Engineer focused on distributed systems, microservices, queuing, and AI products. Currently at Studio Jadu."}],["$","link","2",{"rel":"icon","href":"/portfolio/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L18","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@19","v":null,"s":"$6"}},"a":"$@1a","u":"$@1b","b":"zx5dWRFnJ-HFoBbnnWaxZ"}
+12:null
+6:300
+1b:true
+6:C
+1a:0
+5:"$undefined"
+19:"$undefined"
+13:"$undefined"
