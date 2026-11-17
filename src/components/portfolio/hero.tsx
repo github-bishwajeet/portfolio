@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
-import { assetPath } from "@/lib/utils";
+import { HeroFlip } from "@/components/portfolio/hero-flip";
 
 export function Hero() {
   return (
@@ -43,16 +42,7 @@ export function Hero() {
         transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         className="relative mx-auto max-w-[420px] px-5 pb-16 md:pb-24"
       >
-        <div className="mx-auto overflow-hidden rounded-full bg-[#1d1d1f] shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
-          <Image
-            src={assetPath("/bishwajeet-avatar.png")}
-            alt="Jeet, Bishwajeet Kumar"
-            width={840}
-            height={840}
-            className="aspect-square w-full object-cover object-center"
-            priority
-          />
-        </div>
+        <HeroFlip />
         <p className="mt-5 text-center text-[14px] text-[#86868b]">
           Bengaluru · Studio Jadu · Open to product team roles
         </p>
