@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 
 const links = [
   { name: "Work", href: "#work" },
@@ -34,7 +34,7 @@ export function SiteNav() {
       <div className="mx-auto flex h-full max-w-[980px] items-center justify-between px-5 text-[12px]">
         <a href="#top" className="flex items-center gap-2 text-[#1d1d1f]" aria-label="Jeet home">
           <Image
-            src="/bishwajeet-avatar.png"
+            src={assetPath("/bishwajeet-avatar.png")}
             alt="Jeet, Bishwajeet Kumar"
             width={22}
             height={22}

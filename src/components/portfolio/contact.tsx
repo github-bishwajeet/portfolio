@@ -1,6 +1,7 @@
 "use client";
 
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { assetPath } from "@/lib/utils";
 
 export function Contact() {
   return (
@@ -22,7 +23,7 @@ export function Contact() {
             Email Jeet
           </a>
           <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/Bishwajeet-Resume.pdf`}
+            href={assetPath("/Bishwajeet-Resume.pdf")}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-[#424245] px-6 py-3 text-[17px] font-medium text-white transition hover:bg-[#525255]"

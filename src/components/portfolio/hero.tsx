@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { assetPath } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -44,7 +45,7 @@ export function Hero() {
       >
         <div className="mx-auto overflow-hidden rounded-full bg-[#1d1d1f] shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
           <Image
-            src="/bishwajeet-avatar.png"
+            src={assetPath("/bishwajeet-avatar.png")}
             alt="Jeet, Bishwajeet Kumar"
             width={840}
             height={840}

@@ -2,12 +2,13 @@
 
 import { motion } from "motion/react";
 import { Carousel, Card, type CardData } from "@/components/ui/apple-cards-carousel";
+import { assetPath } from "@/lib/utils";
 
 const cards: CardData[] = [
   {
     category: "AI platform · Current",
     title: "Studio Jadu",
-    src: "/projects/studiojadu-card.jpg",
+    src: assetPath("/projects/studiojadu-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -32,7 +33,7 @@ const cards: CardData[] = [
   {
     category: "Commerce integrations",
     title: "MDware",
-    src: "/projects/mdware-card.jpg",
+    src: assetPath("/projects/mdware-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -57,7 +58,7 @@ const cards: CardData[] = [
   {
     category: "Real estate platform",
     title: "Valora Homes",
-    src: "/projects/valora-card.jpg",
+    src: assetPath("/projects/valora-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -82,7 +83,7 @@ const cards: CardData[] = [
   {
     category: "Homes & developments",
     title: "Uprising Homes",
-    src: "/projects/uprising-card.jpg",
+    src: assetPath("/projects/uprising-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -107,7 +108,7 @@ const cards: CardData[] = [
   {
     category: "Clinic operations",
     title: "Gaesthetic Room",
-    src: "/projects/gaesthetic-card.jpg",
+    src: assetPath("/projects/gaesthetic-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -132,7 +133,7 @@ const cards: CardData[] = [
   {
     category: "Floral commerce",
     title: "Satnam Floral Design",
-    src: "/projects/satnams-card.jpg",
+    src: assetPath("/projects/satnams-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -156,7 +157,7 @@ const cards: CardData[] = [
   {
     category: "Fintech lending",
     title: "Calgary Lending",
-    src: "/projects/calgarylending-card.jpg",
+    src: assetPath("/projects/calgarylending-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
@@ -181,7 +182,7 @@ const cards: CardData[] = [
   {
     category: "Care operations",
     title: "Merge Community Services",
-    src: "/projects/mergecs-card.jpg",
+    src: assetPath("/projects/mergecs-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
         <p>
