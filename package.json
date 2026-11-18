@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:check": "node scripts/seo-check.mjs",
+    "pages:deploy": "npm run build && wrangler pages deploy out --project-name=jeet-portfolio --commit-dirty=true"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -37,6 +39,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "tailwindcss": "4.3.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.53.0"
   }
 }

@@ -8,6 +8,7 @@ const cards: CardData[] = [
   {
     category: "AI platform · Current",
     title: "Studio Jadu",
+    alt: "Studio Jadu AIDA creative platform interface screenshot",
     src: assetPath("/projects/studiojadu-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -33,6 +34,7 @@ const cards: CardData[] = [
   {
     category: "Commerce integrations",
     title: "MDware",
+    alt: "MDware commerce integrations product screenshot",
     src: assetPath("/projects/mdware-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -58,6 +60,7 @@ const cards: CardData[] = [
   {
     category: "Real estate platform",
     title: "Valora Homes",
+    alt: "Valora Homes real estate platform screenshot",
     src: assetPath("/projects/valora-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -83,6 +86,7 @@ const cards: CardData[] = [
   {
     category: "Homes & developments",
     title: "Uprising Homes",
+    alt: "Uprising Homes development brand site screenshot",
     src: assetPath("/projects/uprising-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -108,6 +112,7 @@ const cards: CardData[] = [
   {
     category: "Clinic operations",
     title: "Gaesthetic Room",
+    alt: "Gaesthetic Room clinic website screenshot",
     src: assetPath("/projects/gaesthetic-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -133,6 +138,7 @@ const cards: CardData[] = [
   {
     category: "Floral commerce",
     title: "Satnam Floral Design",
+    alt: "Satnam Floral Design commerce site screenshot",
     src: assetPath("/projects/satnams-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -157,6 +163,7 @@ const cards: CardData[] = [
   {
     category: "Fintech lending",
     title: "Calgary Lending",
+    alt: "Calgary Lending mortgage platform screenshot",
     src: assetPath("/projects/calgarylending-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -182,6 +189,7 @@ const cards: CardData[] = [
   {
     category: "Care operations",
     title: "Merge Community Services",
+    alt: "Merge Community Services care operations platform screenshot",
     src: assetPath("/projects/mergecs-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">

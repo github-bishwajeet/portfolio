@@ -2,7 +2,7 @@
 
 Senior Fullstack Engineer portfolio for **Bishwajeet Kumar**, rebuilt with [Aceternity UI](https://ui.aceternity.com/), Next.js, Tailwind CSS, and Motion.
 
-Live: [github-bishwajeet.github.io/portfolio](https://github-bishwajeet.github.io/portfolio/)
+Production: Cloudflare Pages (`https://jeet-portfolio-5q5.pages.dev`)
 
 ## Develop
 
@@ -13,10 +13,31 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Build for GitHub Pages
+## Build & SEO check
 
 ```bash
 npm run build
+npm run seo:check
 ```
 
-Static output lands in `out/` (with `basePath` `/portfolio` in production). Deploy the contents of `out/` to the `gh-pages` / Pages branch.
+Static output lands in `out/`.
+
+## Deploy to Cloudflare Pages
+
+```bash
+npx wrangler login
+npx wrangler pages project create jeet-portfolio --production-branch=main
+npm run pages:deploy
+```
+
+Override the canonical site URL (custom domain) with:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your.domain npm run pages:deploy
+```
+
+Optional subpath hosting:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/portfolio npm run pages:deploy
+```

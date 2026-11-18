@@ -35,7 +35,7 @@ export function SiteNav() {
         <a href="#top" className="flex items-center gap-2 text-[#1d1d1f]" aria-label="Jeet home">
           <Image
             src={assetPath("/bishwajeet-avatar.png")}
-            alt="Jeet, Bishwajeet Kumar"
+            alt=""
             width={22}
             height={22}
             className="h-[22px] w-[22px] rounded-full object-cover"
@@ -44,7 +44,10 @@ export function SiteNav() {
           <span className="text-[14px] font-semibold tracking-tight">Jeet</span>
         </a>
 
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 md:flex">
+        <nav
+          aria-label="Primary"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 md:flex"
+        >
           {links.map((link) => (
             <a
               key={link.href}

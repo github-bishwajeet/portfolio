@@ -18,6 +18,8 @@ export type CardData = {
   title: string;
   category: string;
   content: ReactNode;
+  /** Descriptive alt for project preview images */
+  alt?: string;
 };
 
 export function Carousel({
@@ -136,7 +138,7 @@ export function Card({
         <div className="relative min-h-0 flex-1 overflow-hidden border-b border-[#d2d2d7] bg-[#e8e8ed]">
           <BlurImage
             src={card.src}
-            alt={card.title}
+            alt={card.alt ?? `${card.title} project preview`}
             fill
             sizes="312px"
             priority={index < 2}
@@ -180,7 +182,7 @@ export function Card({
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#f5f5f7]">
                 <BlurImage
                   src={card.src}
-                  alt={card.title}
+                  alt={card.alt ?? `${card.title} project preview`}
                   fill
                   sizes="896px"
                   className="object-cover object-top"
