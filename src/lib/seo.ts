@@ -63,7 +63,7 @@ export function personJsonLd() {
     jobTitle: siteConfig.jobTitle,
     description: siteConfig.description,
     url: `${siteConfig.url}/`,
-    image: absoluteUrl("/bishwajeet-avatar.png"),
+    image: absoluteUrl("/bishwajeet-avatar.webp"),
     email: `mailto:${siteConfig.email}`,
     address: {
       "@type": "PostalAddress",

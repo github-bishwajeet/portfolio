@@ -140,8 +140,8 @@ export function Card({
             src={card.src}
             alt={card.alt ?? `${card.title} project preview`}
             fill
-            sizes="312px"
-            priority={index < 2}
+            sizes="(max-width: 768px) 70vw, 312px"
+            loading={index < 2 ? "eager" : "lazy"}
             className="object-cover object-top transition duration-500 group-hover:scale-[1.03]"
           />
         </div>

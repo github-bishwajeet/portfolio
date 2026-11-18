@@ -1,7 +1,18 @@
 "use client";
 
-import { MacbookScroll } from "@/components/ui/macbook-scroll";
+import dynamic from "next/dynamic";
 import { experience } from "@/data/portfolio";
+
+const MacbookScroll = dynamic(
+  () =>
+    import("@/components/ui/macbook-scroll").then((mod) => mod.MacbookScroll),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="mx-auto h-[420px] w-full max-w-[980px] animate-pulse rounded-[28px] bg-[#f5f5f7]" />
+    ),
+  },
+);
 
 function ExperienceScreen() {
   return (

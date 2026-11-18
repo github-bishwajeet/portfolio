@@ -226,12 +226,14 @@ export function HeroFlip() {
         >
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <Image
-              src={assetPath("/bishwajeet-avatar.png")}
+              src={assetPath("/bishwajeet-avatar.webp")}
               alt="Jeet, Bishwajeet Kumar"
               width={840}
               height={840}
+              sizes="(max-width: 768px) 80vw, 420px"
               className="aspect-square h-full w-full object-cover object-center"
               priority
+              fetchPriority="high"
             />
           </div>
           {!reduceMotion ? (

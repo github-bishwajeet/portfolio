@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono, Outfit } from "next/font/google";
 import { absoluteUrl, siteConfig } from "@/lib/seo";
+import { assetPath } from "@/lib/utils";
 import "./globals.css";
 
 const sans = Outfit({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -100,6 +101,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${sans.variable} ${mono.variable} h-full`}
       suppressHydrationWarning
     >
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href={assetPath("/bishwajeet-avatar.webp")}
+          type="image/webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="min-h-full font-sans text-foreground">{children}</body>
     </html>
   );

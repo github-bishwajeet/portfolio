@@ -9,8 +9,20 @@
 /og-image.png
   Cache-Control: public, max-age=86400
 
+/bishwajeet-avatar.webp
+  Cache-Control: public, max-age=604800
+
+/bishwajeet-avatar.jpg
+  Cache-Control: public, max-age=604800
+
+/bishwajeet-avatar-nav.webp
+  Cache-Control: public, max-age=604800
+
 /bishwajeet-avatar.png
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=604800
+
+/projects/*
+  Cache-Control: public, max-age=604800
 
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
@@ -19,4 +31,3 @@
 /robots.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
-

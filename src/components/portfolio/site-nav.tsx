@@ -34,12 +34,11 @@ export function SiteNav() {
       <div className="mx-auto flex h-full max-w-[980px] items-center justify-between px-5 text-[12px]">
         <a href="#top" className="flex items-center gap-2 text-[#1d1d1f]" aria-label="Jeet home">
           <Image
-            src={assetPath("/bishwajeet-avatar.png")}
+            src={assetPath("/bishwajeet-avatar-nav.webp")}
             alt=""
-            width={22}
-            height={22}
+            width={44}
+            height={44}
             className="h-[22px] w-[22px] rounded-full object-cover"
-            priority
           />
           <span className="text-[14px] font-semibold tracking-tight">Jeet</span>
         </a>
