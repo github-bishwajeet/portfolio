@@ -1,2 +1,5 @@
 # Serve Google verification at the exact .html URL (Pages otherwise 308s away the extension)
 /google5374cbbe7aecc4bd.html /google5374cbbe7aecc4bd 200
+
+# Avoid 404 HTML if a crawler requests a trailing slash on the sitemap
+/sitemap.xml/ /sitemap.xml 301
