@@ -5,7 +5,7 @@
  * for a custom domain (no trailing slash).
  */
 
-const DEFAULT_SITE_URL = "https://jeet-portfolio-5q5.pages.dev";
+const DEFAULT_SITE_URL = "https://jeetstack.pages.dev";
 
 function normalizeSiteUrl(url: string) {
   return url.replace(/\/+$/, "");

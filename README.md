@@ -2,7 +2,7 @@
 
 Senior Fullstack Engineer portfolio for **Bishwajeet Kumar**, rebuilt with [Aceternity UI](https://ui.aceternity.com/), Next.js, Tailwind CSS, and Motion.
 
-Production: Cloudflare Pages (`https://jeet-portfolio-5q5.pages.dev`)
+Production: Cloudflare Pages (`https://jeetstack.pages.dev`)
 
 ## Develop
 
@@ -26,7 +26,7 @@ Static output lands in `out/`.
 
 ```bash
 npx wrangler login
-npx wrangler pages project create jeet-portfolio --production-branch=main
+npx wrangler pages project create jeetstack --production-branch=main
 npm run pages:deploy
 ```
 
