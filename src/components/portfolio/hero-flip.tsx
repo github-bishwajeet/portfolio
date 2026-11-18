@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
+import { BorderBeam } from "@/components/ui/border-beam";
 import { assetPath, cn } from "@/lib/utils";
 
 type Token =
@@ -209,7 +210,7 @@ export function HeroFlip() {
   const showingCode = face === "code" && !reduceMotion;
 
   return (
-    <div className="relative mx-auto aspect-square w-full [perspective:1200px]">
+    <div className="relative mx-auto aspect-square w-full rounded-full [perspective:1200px]">
       <motion.div
         className="relative h-full w-full"
         style={{ transformStyle: "preserve-3d" }}
@@ -217,20 +218,34 @@ export function HeroFlip() {
         transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
       >
         <div
-          className="absolute inset-0 overflow-hidden rounded-full bg-[#1d1d1f] shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+          className="absolute inset-0 rounded-full bg-[#1d1d1f] shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
           style={{
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
           }}
         >
-          <Image
-            src={assetPath("/bishwajeet-avatar.png")}
-            alt="Jeet, Bishwajeet Kumar"
-            width={840}
-            height={840}
-            className="aspect-square h-full w-full object-cover object-center"
-            priority
-          />
+          <div className="absolute inset-0 overflow-hidden rounded-full">
+            <Image
+              src={assetPath("/bishwajeet-avatar.png")}
+              alt="Jeet, Bishwajeet Kumar"
+              width={840}
+              height={840}
+              className="aspect-square h-full w-full object-cover object-center"
+              priority
+            />
+          </div>
+          {!reduceMotion ? (
+            <div className="pointer-events-none absolute -inset-px rounded-full">
+              <BorderBeam
+                duration={8}
+                size={120}
+                borderWidth={4}
+                colorFrom="#ffaa40"
+                colorTo="#9c40ff"
+                style={{ offsetPath: "circle(50% at 50% 50%)" }}
+              />
+            </div>
+          ) : null}
         </div>
 
         <div

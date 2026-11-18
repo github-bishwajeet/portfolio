@@ -1,11 +1,11 @@
 /**
  * Central SEO configuration for the portfolio.
  *
- * Production host defaults to Cloudflare Pages. Override with NEXT_PUBLIC_SITE_URL
- * for a custom domain (no trailing slash).
+ * Production host defaults to the custom domain. Override with NEXT_PUBLIC_SITE_URL
+ * if needed (no trailing slash).
  */
 
-const DEFAULT_SITE_URL = "https://jeetstack.pages.dev";
+const DEFAULT_SITE_URL = "https://jeetstack.com";
 
 function normalizeSiteUrl(url: string) {
   return url.replace(/\/+$/, "");
@@ -26,7 +26,7 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL,
   ),
   description:
-    "Jeet (Bishwajeet Kumar) is a senior fullstack engineer in Bengaluru building distributed systems, microservices, job queues, and AI products. Currently at Studio Jadu.",
+    "Jeet (Bishwajeet Kumar) is a senior fullstack engineer in Bengaluru building distributed systems, microservices, job queues, and AI products. Currently at StudioJadu.",
   keywords: [
     "Bishwajeet Kumar",
     "Jeet",
@@ -37,7 +37,7 @@ export const siteConfig = {
     "Laravel",
     "Node.js",
     "React",
-    "Studio Jadu",
+    "StudioJadu",
   ],
   sameAs: [
     "https://github.com/github-bishwajeet",

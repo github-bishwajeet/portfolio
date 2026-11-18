@@ -11,7 +11,7 @@ const root = process.cwd();
 const outDir = join(root, "out");
 const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://jeetstack.pages.dev"
+  "https://jeetstack.com"
 ).replace(/\/+$/, "");
 
 const errors = [];

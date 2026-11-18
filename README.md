@@ -2,7 +2,7 @@
 
 Senior Fullstack Engineer portfolio for **Bishwajeet Kumar**, rebuilt with [Aceternity UI](https://ui.aceternity.com/), Next.js, Tailwind CSS, and Motion.
 
-Production: Cloudflare Pages (`https://jeetstack.pages.dev`)
+Production: [`https://jeetstack.com`](https://jeetstack.com) (Cloudflare Pages)
 
 ## Develop
 

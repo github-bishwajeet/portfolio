@@ -8,7 +8,7 @@ export const featuredProjects: {
   href?: string;
 }[] = [
   {
-    title: "Studio Jadu · AIDA",
+    title: "StudioJadu · AIDA",
     description:
       "AI enabled story, image, and video workflows for independent creators. Creative tooling wired to production systems.",
     tags: ["AI product", "Fullstack"],
@@ -39,7 +39,7 @@ export const featuredProjects: {
 
 export const projects = [
   {
-    title: "Studio Jadu · AIDA",
+    title: "StudioJadu · AIDA",
     description:
       "AI enabled story, image, and video workflows for independent creators. Creative tooling wired to production systems.",
     tags: ["AI product", "Fullstack", "Current"],
@@ -113,7 +113,7 @@ export const projects = [
 
 export const experience = [
   {
-    company: "Studio Jadu",
+    company: "StudioJadu",
     role: "Senior Software Engineer",
     when: "Aug 2025 to Present · Bengaluru",
     body: "Shipping AI powered filmmaking and storytelling tools across story creation, image generation, video workflows, and the platforms that connect them.",
@@ -160,7 +160,7 @@ export const strengths = [
   {
     title: "AI product engineering",
     description:
-      "Creative AI workflows at Studio Jadu. Story, image, and video systems that stay reliable under real usage.",
+      "Creative AI workflows at StudioJadu. Story, image, and video systems that stay reliable under real usage.",
     accent: "emerald",
   },
   {

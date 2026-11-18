@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { HeroFlip } from "@/components/portfolio/hero-flip";
+import { AnimatedGradientText } from "@/components/ui/animated-gradient-text";
 
 export function Hero() {
   return (
@@ -18,12 +19,21 @@ export function Hero() {
           <h1 className="apple-headline mt-1 text-[48px] leading-[1.05] text-[#1d1d1f] md:text-[64px] lg:text-[72px]">
             Hi, I&apos;m Jeet.
           </h1>
-          <p className="mx-auto mt-4 max-w-[560px] text-[19px] leading-[1.55] font-normal text-[#86868b] md:text-[21px] md:leading-[1.6]">
-            Senior fullstack engineer.
+          <p className="mx-auto my-6 max-w-[560px] text-[19px] leading-[1.55] font-normal text-[#86868b] md:my-8 md:text-[21px] md:leading-[1.6]">
+            <AnimatedGradientText
+              speed={1.2}
+              colorFrom="#0071e3"
+              colorTo="#1d1d1f"
+              className="text-[19px] font-medium md:text-[21px]"
+            >
+              Senior Fullstack Engineer.
+            </AnimatedGradientText>
             <br />
-            Distributed systems, queues, and AI products that ship.
+            <span className="text-[15px] font-extralight leading-[1.55] tracking-[0.01em] text-[#6e6e73] [word-spacing:0.08em] md:text-[17px] md:leading-[1.6]">
+              Shipping distributed systems and AI pipelines that hold under real load.
+            </span>
           </p>
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-6 text-[17px]">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-[17px]">
             <a href="#work" className="apple-link inline-flex items-center gap-1">
               See the work
               <span aria-hidden>›</span>
@@ -44,7 +54,7 @@ export function Hero() {
       >
         <HeroFlip />
         <p className="mt-5 text-center text-[14px] text-[#86868b]">
-          Bengaluru · Studio Jadu · Open to product team roles
+          Bengaluru · StudioJadu · Open to product team roles
         </p>
       </motion.div>
     </section>

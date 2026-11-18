@@ -7,8 +7,8 @@ import { assetPath } from "@/lib/utils";
 const cards: CardData[] = [
   {
     category: "AI platform · Current",
-    title: "Studio Jadu",
-    alt: "Studio Jadu AIDA creative platform interface screenshot",
+    title: "StudioJadu",
+    alt: "StudioJadu AIDA creative platform interface screenshot",
     src: assetPath("/projects/studiojadu-card.jpg"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
@@ -227,7 +227,7 @@ export function Work() {
           <h2 className="apple-headline text-[40px] text-[#1d1d1f] md:text-[56px]">
             Built to ship.
           </h2>
-          <p className="mx-auto mt-3 max-w-[620px] text-[19px] font-semibold text-[#86868b] md:text-[21px]">
+          <p className="mx-auto mt-3 max-w-[620px] text-[15px] font-extralight leading-[1.55] tracking-[0.01em] text-[#6e6e73] [word-spacing:0.08em] md:text-[17px] md:leading-[1.6]">
             Real products across AI platforms, commerce integrations, and operational systems.
           </p>
         </motion.div>
