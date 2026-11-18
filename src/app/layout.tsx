@@ -77,6 +77,9 @@ export const metadata: Metadata = {
   // HTML-tag verification — TXT is not available on *.pages.dev (Cloudflare-owned DNS)
   verification: {
     google: "BCwpcunxVSJne9oVBuoRbNT6QXcZooh7XRbprh8TiiA",
+    other: {
+      "msvalidate.01": "2F3200181643C645706D914A5AC1EB3F",
+    },
   },
 };
 

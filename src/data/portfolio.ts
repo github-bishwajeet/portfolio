@@ -67,6 +67,14 @@ export const projects = [
     meta: "Belgium · 6 yrs",
   },
   {
+    title: "Kaler Contracting",
+    description:
+      "General contracting brand site for finishing and exterior work across residential and multi unit Calgary builds.",
+    tags: ["Marketing site", "Construction", "Lead gen"],
+    meta: "Calgary",
+    href: "https://kalercontracting.com/",
+  },
+  {
     title: "Doutedesk",
     description:
       "Led web product and REST APIs for a digital office platform. Integrations, deploy, and monitoring.",

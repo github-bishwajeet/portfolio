@@ -212,6 +212,32 @@ const cards: CardData[] = [
       </div>
     ),
   },
+  {
+    category: "General contracting",
+    title: "Kaler Contracting",
+    alt: "Kaler Contracting general contracting brand site",
+    src: assetPath("/projects/kaler-card.jpg"),
+    content: (
+      <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p>
+          Calgary general contracting brand for finishing and exterior work across residential and
+          multi unit builds.
+        </p>
+        <p>
+          Focus: project storytelling, inquiry flows, and a media first marketing surface that keeps
+          schedules and field execution clear for owners.
+        </p>
+        <a
+          href="https://kalercontracting.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="apple-link inline-flex items-center gap-1 text-[15px]"
+        >
+          kalercontracting.com <span aria-hidden>›</span>
+        </a>
+      </div>
+    ),
+  },
 ];
 
 export function Work() {
