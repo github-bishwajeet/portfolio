@@ -74,6 +74,10 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  // HTML-tag verification — TXT is not available on *.pages.dev (Cloudflare-owned DNS)
+  verification: {
+    google: "BCwpcunxVSJne9oVBuoRbNT6QXcZooh7XRbprh8TiiA",
+  },
 };
 
 export const viewport: Viewport = {
