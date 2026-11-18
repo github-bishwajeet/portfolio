@@ -1,0 +1,2 @@
+# Serve Google verification at the exact .html URL (Pages otherwise 308s away the extension)
+/google5374cbbe7aecc4bd.html /google5374cbbe7aecc4bd 200
