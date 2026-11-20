@@ -1,16 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { DirectionAwareSelection } from "@/components/interactions/direction-aware-selection";
-import { stack } from "@/data/portfolio";
-
-const selectionItems = Object.entries(stack).flatMap(([group, items], gi) =>
-  items.map((label, ii) => ({
-    id: `${group}-${label}`,
-    label,
-    color: ["#0071e3", "#1d1d1f", "#6e6e73", "#2997ff"][(gi + ii) % 4],
-  })),
-);
+import { TechPipeline } from "@/components/portfolio/tech-pipeline";
 
 const pillars = [
   {
@@ -46,7 +37,7 @@ export function SkillsHub() {
             Systems that scale.
           </h2>
           <p className="mx-auto mt-3 max-w-[560px] text-[19px] font-semibold text-[#86868b] md:text-[21px]">
-            Distributed systems, microservices, and queues at the center of how Jeet builds.
+            How Jeet designs services, queues, and integrations for real load.
           </p>
         </motion.div>
 
@@ -68,14 +59,8 @@ export function SkillsHub() {
           ))}
         </div>
 
-        <div className="mt-12">
-          <p className="mb-4 text-center text-[14px] text-[#86868b]">
-            Technologies
-          </p>
-          <DirectionAwareSelection
-            items={selectionItems}
-            className="rounded-[28px] border-0 bg-[#f5f5f7] p-6 shadow-none"
-          />
+        <div className="mt-16">
+          <TechPipeline />
         </div>
       </div>
     </section>

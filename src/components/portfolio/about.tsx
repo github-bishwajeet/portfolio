@@ -19,8 +19,9 @@ export function About() {
             Meet Bishwajeet Kumar.
           </h2>
           <p className="mt-4 text-[19px] leading-snug font-semibold text-[#86868b] md:text-[21px]">
-            Colleagues call him Jeet. He builds distributed systems, microservices,
-            and queued workloads across AI products and multi sided platforms.
+            Colleagues call him Jeet. Software engineer since 2020, now shipping
+            AI product systems at StudioJadu after leading fullstack delivery at
+            TheCodeWork.
           </p>
           <p className="mt-5">
             <Link href="/about/" className="apple-link text-[17px]">

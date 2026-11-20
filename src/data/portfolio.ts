@@ -6,6 +6,9 @@ export const featuredProjects: {
   gradient: string;
   accent: string;
   href?: string;
+  /** Personal/open-source vs employer/client contribution */
+  credit: "creator" | "contributor";
+  ownership: string;
 }[] = [
   {
     title: "StudioJadu · AIDA",
@@ -15,6 +18,8 @@ export const featuredProjects: {
     stack: ["Laravel", "Vue", "AI APIs"],
     gradient: "linear-gradient(145deg, #0f172a 0%, #1e1b4b 45%, #312e81 100%)",
     accent: "linear-gradient(135deg, #818cf8, #c084fc)",
+    credit: "contributor",
+    ownership: "Employer product · engineering contribution at StudioJadu",
   },
   {
     title: "Clunker Busters",
@@ -24,6 +29,8 @@ export const featuredProjects: {
     stack: ["Laravel", "APIs", "Redis"],
     gradient: "linear-gradient(145deg, #111827 0%, #064e3b 50%, #115e59 100%)",
     accent: "linear-gradient(135deg, #34d399, #2dd4bf)",
+    credit: "contributor",
+    ownership: "Client product · delivered at TheCodeWork",
   },
   {
     title: "Chattle",
@@ -34,6 +41,8 @@ export const featuredProjects: {
     gradient: "linear-gradient(145deg, #0c0a09 0%, #1c1917 40%, #44403c 100%)",
     accent: "linear-gradient(135deg, #fb923c, #f472b6)",
     href: "https://github.com/github-bishwajeet/chattle",
+    credit: "creator",
+    ownership: "Personal open source",
   },
 ];
 
@@ -128,7 +137,7 @@ export const experience = [
   },
   {
     company: "TheCodeWork",
-    role: "Software Engineer (SDE III) · Project lead",
+    role: "Full-Stack Engineer (SDE III) · Project lead",
     when: "Jun 2021 to Jul 2025 · Bengaluru",
     body: "End to end product development for startups and enterprises. Architecture, fullstack delivery, sprint ownership, and multi project client coordination.",
   },
@@ -205,8 +214,20 @@ export const stack = {
     "Event driven",
     "Job queues",
     "Redis",
+    "File cache",
+    "DB cache",
     "Webhooks",
   ],
-  Backend: ["Laravel", "Node.js", "Spring Boot", "REST APIs", "MySQL", "AWS"],
-  Frontend: ["Vue.js", "React", "Tailwind CSS", "Next.js", "PWA"],
+  Backend: [
+    "Laravel",
+    "Node.js",
+    "Spring Boot",
+    "REST APIs",
+    "MySQL",
+    "MongoDB",
+    "AWS",
+    "GCP",
+    "Azure",
+  ],
+  Frontend: ["Vue.js", "React", "Flutter", "Tailwind CSS", "Next.js", "PWA"],
 };

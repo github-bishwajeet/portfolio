@@ -4,7 +4,7 @@
  * Production host defaults to the custom domain. Override with NEXT_PUBLIC_SITE_URL
  * if needed (no trailing slash).
  *
- * TODO(confirm): Exact LPU degree name, graduation year, and alumniOf details.
+ * TODO(confirm): LPU graduation year and field of study for alumniOf detail.
  * TODO(confirm): Additional sameAs profiles (X/Twitter, Medium, Dev.to) if any.
  * TODO(confirm): Whether public email should remain in Person JSON-LD.
  */
@@ -232,7 +232,11 @@ export function personJsonLd() {
     worksFor: {
       "@id": organizationId(),
     },
-    // TODO(confirm): alumniOf — Lovely Professional University (exact degree + years)
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Lovely Professional University",
+    },
+    // TODO(confirm): graduation year + field of study for richer alumniOf / credential markup
     sameAs: [...siteConfig.sameAs],
     knowsAbout: [...siteConfig.knowsAbout],
   };
@@ -293,23 +297,32 @@ export function breadcrumbJsonLd(
 }
 
 export function portfolioItemListJsonLd(
-  items: { title: string; description: string; href?: string }[],
+  items: {
+    title: string;
+    description: string;
+    href?: string;
+    /** creator = personal/open-source; contributor = employer or client work */
+    credit?: "creator" | "contributor";
+  }[],
 ) {
   return {
     "@type": "ItemList",
     "@id": `${siteConfig.url}/#projects`,
-    name: "Selected work by Bishwajeet Kumar",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      item: {
-        "@type": "CreativeWork",
-        name: item.title,
-        description: item.description,
-        ...(item.href ? { url: item.href } : {}),
-        creator: { "@id": personId() },
-      },
-    })),
+    name: "Selected work involving Bishwajeet Kumar",
+    itemListElement: items.map((item, index) => {
+      const credit = item.credit ?? "contributor";
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "CreativeWork",
+          name: item.title,
+          description: item.description,
+          ...(item.href ? { url: item.href } : {}),
+          [credit]: { "@id": personId() },
+        },
+      };
+    }),
   };
 }
 

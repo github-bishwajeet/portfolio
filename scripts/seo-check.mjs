@@ -147,6 +147,28 @@ const h1s = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi)];
 if (!h1s.length) fail("Homepage missing H1");
 else if (h1s.length > 1) warn(`Homepage has ${h1s.length} H1 elements`);
 
+// Crawlable career facts on homepage (not MacBook-only)
+for (const needle of [
+  "StudioJadu",
+  "Senior Software Engineer",
+  "TheCodeWork",
+  "Full-Stack Engineer",
+  "Aug 2025",
+  "Jun 2021",
+]) {
+  if (!html.includes(needle)) {
+    fail(`Homepage HTML missing crawlable career text: ${needle}`);
+  }
+}
+
+const aboutHtml = read("about/index.html");
+if (!/B\.Tech/i.test(aboutHtml) || !/Lovely Professional University/i.test(aboutHtml)) {
+  fail("About page should publish B.Tech and Lovely Professional University");
+}
+if (!/alumniOf/i.test(html) && !html.includes("Lovely Professional University")) {
+  warn("Person JSON-LD may be missing alumniOf on homepage");
+}
+
 // robots.txt
 if (!/User-Agent:\s*\*/i.test(robots)) fail("robots.txt missing User-Agent: *");
 if (/Disallow:\s*\/\s*$/m.test(robots) && !/Allow:\s*\//i.test(robots)) {

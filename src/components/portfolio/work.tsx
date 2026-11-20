@@ -12,13 +12,19 @@ const cards: CardData[] = [
     src: assetPath("/projects/studiojadu-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
-        <p>
-          Animation studio platform for independent artists. AIDA creative workbench for story,
-          image, and video generation wired into production systems.
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Employer product · engineering contribution
         </p>
         <p>
-          Focus: async media pipelines, job queues, service oriented APIs, and reliable delivery for
-          long running AI workloads.
+          Animation studio platform for independent artists. AIDA creative workbench for story,
+          image, and video generation wired into production systems. Product owned by StudioJadu.
+        </p>
+        <p>
+          My focus: async media pipelines, job queues, service oriented APIs, and reliable delivery
+          for long running AI workloads.
+        </p>
+        <p className="text-[14px] text-[#86868b]">
+          Stack: Laravel, Vue, AI APIs, Redis / job queues.
         </p>
         <a
           href="https://studiojadu.com/"
@@ -38,12 +44,15 @@ const cards: CardData[] = [
     src: assetPath("/projects/mdware-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Lightspeed partner suite for invoicing, quoting, loyalty, and payments used by 1400+
           merchants across retail and ecommerce.
         </p>
         <p>
-          Focus: multi tenant SaaS, webhook driven integrations, Peppol invoicing flows, and
+          My focus: multi tenant SaaS, webhook driven integrations, Peppol invoicing flows, and
           omnichannel data sync across Retail and eCom.
         </p>
         <a
@@ -64,13 +73,16 @@ const cards: CardData[] = [
     src: assetPath("/projects/valora-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Calgary builder platform for custom homes, infill, and multi family developments with
           listings, project storytelling, and inquiry flows.
         </p>
         <p>
-          Focus: content heavy property catalogs, lead capture pipelines, and performant marketing
-          surfaces backed by structured listing data.
+          My focus: content heavy property catalogs, lead capture pipelines, and performant
+          marketing surfaces backed by structured listing data.
         </p>
         <a
           href="https://valorahomes.ca/"
@@ -90,13 +102,16 @@ const cards: CardData[] = [
     src: assetPath("/projects/uprising-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Real estate development brand site for modern builds and community facing project
           experiences.
         </p>
         <p>
-          Focus: modular page systems, media delivery, and conversion oriented flows that stay fast
-          under rich imagery.
+          My focus: modular page systems, media delivery, and conversion oriented flows that stay
+          fast under rich imagery.
         </p>
         <a
           href="https://uprisinghomes.ca/"
@@ -116,13 +131,16 @@ const cards: CardData[] = [
     src: assetPath("/projects/gaesthetic-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Medical aesthetics clinic in Calgary with treatments, mobile services, content, and
           booking oriented journeys.
         </p>
         <p>
-          Focus: appointment and inquiry workflows, service catalog architecture, and reliable CMS
-          backed delivery for clinic ops.
+          My focus: appointment and inquiry workflows, service catalog architecture, and reliable
+          CMS backed delivery for clinic ops.
         </p>
         <a
           href="https://gaestheticroom.com/"
@@ -142,12 +160,15 @@ const cards: CardData[] = [
     src: assetPath("/projects/satnams-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Floral design brand experience for custom arrangements, events, and customer discovery.
         </p>
         <p>
-          Focus: catalog and order inquiry systems, media first UX, and backend patterns that keep
-          seasonal inventory and requests organized.
+          My focus: catalog and order inquiry systems, media first UX, and backend patterns that
+          keep seasonal inventory and requests organized.
         </p>
         <a
           href="https://satnamsfloraldesign.com/"
@@ -167,13 +188,16 @@ const cards: CardData[] = [
     src: assetPath("/projects/calgarylending-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Strategic mortgage platform for investors covering investment purchases, consolidation,
           and creative finance across Canada.
         </p>
         <p>
-          Focus: lead qualification pipelines, secure form processing, and structured routing from
-          first conversation to funding handoff.
+          My focus: lead qualification pipelines, secure form processing, and structured routing
+          from first conversation to funding handoff.
         </p>
         <a
           href="https://calgarylendingofficial.ca/"
@@ -193,12 +217,15 @@ const cards: CardData[] = [
     src: assetPath("/projects/mergecs-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Alberta agency platform for child and family transportation, supervised visits, and
           caseworker referrals.
         </p>
         <p>
-          Focus: scheduling systems, referral intake, documentation workflows, and service
+          My focus: scheduling systems, referral intake, documentation workflows, and service
           coordination across caseworkers and support staff.
         </p>
         <a
@@ -219,13 +246,16 @@ const cards: CardData[] = [
     src: assetPath("/projects/kaler-card.webp"),
     content: (
       <div className="space-y-4 text-[17px] leading-relaxed text-[#86868b]">
+        <p className="text-[13px] font-medium tracking-wide text-[#0071e3] uppercase">
+          Client product · delivered at TheCodeWork
+        </p>
         <p>
           Calgary general contracting brand for finishing and exterior work across residential and
           multi unit builds.
         </p>
         <p>
-          Focus: project storytelling, inquiry flows, and a media first marketing surface that keeps
-          schedules and field execution clear for owners.
+          My focus: project storytelling, inquiry flows, and a media first marketing surface that
+          keeps schedules and field execution clear for owners.
         </p>
         <a
           href="https://kalercontracting.com/"
@@ -254,7 +284,8 @@ export function Work() {
             Built to ship.
           </h2>
           <p className="mx-auto mt-3 max-w-[620px] text-[15px] font-extralight leading-[1.55] tracking-[0.01em] text-[#6e6e73] [word-spacing:0.08em] md:text-[17px] md:leading-[1.6]">
-            Real products across AI platforms, commerce integrations, and operational systems.
+            Selected products Jeet contributed to or built. Employer and client
+            products are labeled; ownership stays with the product owner.
           </p>
         </motion.div>
       </div>

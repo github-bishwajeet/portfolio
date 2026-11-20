@@ -133,3 +133,50 @@
     text-underline-offset: 3px;
   }
 }
+
+@keyframes tech-flow-dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes tech-stage-sheen {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(320%);
+  }
+}
+
+@keyframes tech-node-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+.tech-flow-dash {
+  animation: tech-flow-dash 1.2s linear infinite;
+}
+
+.tech-stage-sheen {
+  animation: tech-stage-sheen 4.5s ease-in-out infinite;
+}
+
+.tech-node-pulse {
+  animation: tech-node-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-flow-dash,
+  .tech-stage-sheen,
+  .tech-node-pulse {
+    animation: none !important;
+  }
+}

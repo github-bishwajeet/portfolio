@@ -55,8 +55,8 @@ export default function AboutPage() {
           <div className="prose-portfolio mt-12 space-y-6 text-[17px] leading-[1.65] text-[#6e6e73] md:text-[18px]">
             <p className="text-[19px] leading-[1.55] font-medium text-[#1d1d1f] md:text-[21px]">
               I&apos;m {siteConfig.fullName} — colleagues call me{" "}
-              {siteConfig.nickname}. I&apos;m a {siteConfig.jobTitle} based in{" "}
-              {siteConfig.location.label}, currently building at{" "}
+              {siteConfig.nickname}. I&apos;m a {siteConfig.jobTitle} in{" "}
+              {siteConfig.location.label}, currently at{" "}
               <a
                 href={siteConfig.organization.url}
                 target="_blank"
@@ -68,22 +68,6 @@ export default function AboutPage() {
               .
             </p>
 
-            <section aria-labelledby="current-role">
-              <h2
-                id="current-role"
-                className="apple-headline text-[28px] text-[#1d1d1f] md:text-[32px]"
-              >
-                Current role
-              </h2>
-              <p className="mt-3">
-                At StudioJadu I work on AI-powered filmmaking and storytelling
-                tools — story creation, image generation, video workflows, and
-                the platforms that connect them. Day to day that means shipping
-                reliable async pipelines, service-oriented APIs, and product
-                surfaces that hold up under real creative usage.
-              </p>
-            </section>
-
             <section aria-labelledby="journey">
               <h2
                 id="journey"
@@ -92,9 +76,19 @@ export default function AboutPage() {
                 Professional journey
               </h2>
               <p className="mt-3">
-                My software engineering career has centered on end-to-end product
-                delivery: architecture, fullstack implementation, integrations,
-                and release ownership for startups and enterprise teams.
+                I have worked as a software engineer since 2020, moving from
+                hands-on Laravel and PHP delivery into senior ownership of
+                backend architecture, distributed systems, and product decisions.
+                Along the way I have led project delivery, mentored junior
+                engineers, and stayed close to architecture choices that keep
+                systems reliable as teams and traffic grow.
+              </p>
+              <p className="mt-3">
+                At TheCodeWork I was a Full-Stack Engineer (SDE III) and project
+                lead, shipping marketplace, ops, and commerce products end to
+                end. Before that I led web and API work at Doutedesk. Earlier
+                roles included mentoring freshers on Laravel and building
+                multi-vendor, ERP, and courier systems.
               </p>
               <ul className="mt-4 space-y-3">
                 {experience.map((item) => (
@@ -119,6 +113,23 @@ export default function AboutPage() {
               </p>
             </section>
 
+            <section aria-labelledby="current-role">
+              <h2
+                id="current-role"
+                className="apple-headline text-[28px] text-[#1d1d1f] md:text-[32px]"
+              >
+                Current role
+              </h2>
+              <p className="mt-3">
+                At StudioJadu I contribute to AI-powered filmmaking and
+                storytelling products: story, image, and video workflows, plus
+                the platforms behind them. Day to day that means async media
+                pipelines, service-oriented APIs, and product surfaces that hold
+                under real creative usage. StudioJadu owns the product; my work
+                is engineering contribution inside that team.
+              </p>
+            </section>
+
             <section aria-labelledby="specializations">
               <h2
                 id="specializations"
@@ -127,10 +138,10 @@ export default function AboutPage() {
                 Technical focus
               </h2>
               <p className="mt-3">
-                I specialize in distributed systems, microservices, job queues,
-                and full-stack delivery. Recent work leans into AI product
-                engineering — creative media pipelines that stay reliable when
-                workloads are long-running and failure-prone.
+                Backend architecture, distributed systems, microservices, and
+                job queues sit at the center of how I build. Recent work also
+                covers AI product engineering: creative media pipelines that
+                stay reliable when jobs are long-running and failure-prone.
               </p>
               <div className="mt-5 space-y-2">
                 {Object.entries(stack).map(([group, items]) => (
@@ -151,9 +162,7 @@ export default function AboutPage() {
                 Education
               </h2>
               <p className="mt-3">
-                {/* TODO(confirm): Exact degree title, field of study, and graduation year for LPU */}
-                Lovely Professional University — details to be confirmed for
-                public listing (degree name and years).
+                B.Tech, Lovely Professional University.
               </p>
             </section>
 

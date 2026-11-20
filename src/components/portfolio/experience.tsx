@@ -62,7 +62,7 @@ export function Experience() {
           Experience.
         </h2>
         <p className="mx-auto mt-3 max-w-[520px] text-[19px] font-semibold text-[#86868b] md:text-[21px]">
-          Scroll to open Jeet&apos;s timeline on the MacBook.
+          Verified roles from 2020 to present.
         </p>
         <p className="mt-4">
           <Link href="/experience/" className="apple-link text-[17px]">
@@ -71,7 +71,26 @@ export function Experience() {
         </p>
       </div>
 
-      <div className="relative">
+      {/* Crawlable semantic timeline — MacBook below is progressive enhancement only. */}
+      <ol className="mx-auto mt-10 max-w-[720px] space-y-5 px-5 text-left">
+        {experience.map((item) => (
+          <li
+            key={item.company}
+            className="rounded-[22px] border border-[#e8e8ed] bg-[#fbfbfd] px-5 py-5 md:px-6"
+          >
+            <p className="text-[13px] font-medium text-[#0071e3]">{item.when}</p>
+            <h3 className="mt-1.5 text-[20px] font-semibold tracking-tight text-[#1d1d1f]">
+              {item.company}
+            </h3>
+            <p className="mt-1 text-[15px] text-[#86868b]">{item.role}</p>
+            <p className="mt-3 text-[15px] leading-relaxed text-[#6e6e73]">
+              {item.body}
+            </p>
+          </li>
+        ))}
+      </ol>
+
+      <div className="relative mt-8" aria-hidden="true">
         <MacbookScroll showGradient screen={<ExperienceScreen />} />
       </div>
     </section>

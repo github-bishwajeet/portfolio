@@ -27,6 +27,7 @@ export default function Home() {
     title: project.title,
     description: project.description,
     href: project.href,
+    credit: project.credit,
   }));
 
   return (
