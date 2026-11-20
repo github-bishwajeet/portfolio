@@ -54,9 +54,8 @@ export default function AboutPage() {
 
           <div className="prose-portfolio mt-12 space-y-6 text-[17px] leading-[1.65] text-[#6e6e73] md:text-[18px]">
             <p className="text-[19px] leading-[1.55] font-medium text-[#1d1d1f] md:text-[21px]">
-              I&apos;m {siteConfig.fullName} — colleagues call me{" "}
-              {siteConfig.nickname}. I&apos;m a {siteConfig.jobTitle} in{" "}
-              {siteConfig.location.label}, currently at{" "}
+              I&apos;m a {siteConfig.jobTitle} in {siteConfig.location.label},
+              currently at{" "}
               <a
                 href={siteConfig.organization.url}
                 target="_blank"
