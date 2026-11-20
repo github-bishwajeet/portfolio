@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { experience } from "@/data/portfolio";
 
 const MacbookScroll = dynamic(
@@ -62,6 +63,11 @@ export function Experience() {
         </h2>
         <p className="mx-auto mt-3 max-w-[520px] text-[19px] font-semibold text-[#86868b] md:text-[21px]">
           Scroll to open Jeet&apos;s timeline on the MacBook.
+        </p>
+        <p className="mt-4">
+          <Link href="/experience/" className="apple-link text-[17px]">
+            Full career timeline ›
+          </Link>
         </p>
       </div>
 

@@ -26,7 +26,7 @@ export function Hero() {
               colorTo="#1d1d1f"
               className="text-[19px] font-medium md:text-[21px]"
             >
-              Senior Fullstack Engineer.
+              Senior Software Engineer.
             </AnimatedGradientText>
             <br />
             <span className="text-[15px] font-extralight leading-[1.55] tracking-[0.01em] text-[#6e6e73] [word-spacing:0.08em] md:text-[17px] md:leading-[1.6]">
@@ -38,8 +38,8 @@ export function Hero() {
               See the work
               <span aria-hidden>›</span>
             </a>
-            <a href="#contact" className="apple-link inline-flex items-center gap-1">
-              Get in touch
+            <a href="/about/" className="apple-link inline-flex items-center gap-1">
+              About Jeet
               <span aria-hidden>›</span>
             </a>
           </div>

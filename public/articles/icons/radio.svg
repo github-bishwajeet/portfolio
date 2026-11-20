@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="160" y2="160">
+      <stop stop-color="#E7FBFF"/>
+      <stop offset="1" stop-color="#C5F3FB"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="36" fill="url(#bg6)"/>
+  <ellipse cx="80" cy="132" rx="48" ry="9" fill="#67E3F9" opacity="0.4"/>
+  <!-- central server -->
+  <rect x="60" y="58" width="40" height="46" rx="10" fill="#06AED4"/>
+  <rect x="68" y="68" width="24" height="5" rx="2.5" fill="#E7FBFF"/>
+  <rect x="68" y="78" width="24" height="5" rx="2.5" fill="#A5F0FC"/>
+  <rect x="68" y="88" width="16" height="5" rx="2.5" fill="#A5F0FC"/>
+  <circle cx="80" cy="54" r="8" fill="#0891B2"/>
+  <!-- clients -->
+  <rect x="18" y="36" width="28" height="22" rx="6" fill="#fff"/>
+  <rect x="114" y="36" width="28" height="22" rx="6" fill="#fff"/>
+  <rect x="18" y="100" width="28" height="22" rx="6" fill="#fff"/>
+  <rect x="114" y="100" width="28" height="22" rx="6" fill="#fff"/>
+  <circle cx="32" cy="47" r="4" fill="#67E3F9"/>
+  <circle cx="128" cy="47" r="4" fill="#67E3F9"/>
+  <circle cx="32" cy="111" r="4" fill="#67E3F9"/>
+  <circle cx="128" cy="111" r="4" fill="#67E3F9"/>
+  <!-- links -->
+  <path d="M46 48l16 16M114 48l-16 16M46 110l16-16M114 110l-16-16" stroke="#0891B2" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- pulse rings -->
+  <circle cx="80" cy="54" r="14" stroke="#A5F0FC" stroke-width="3" fill="none" opacity="0.8"/>
+</svg>

@@ -1,15 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
+import { siteConfig } from "@/lib/seo";
 import { assetPath, cn } from "@/lib/utils";
 
 const links = [
-  { name: "Work", href: "#work" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
-  { name: "About", href: "#about" },
+  { name: "Work", href: "/#work" },
+  { name: "About", href: "/about/" },
+  { name: "Experience", href: "/experience/" },
+  { name: "Articles", href: "/articles/" },
+  { name: "Contact", href: "/contact/" },
 ];
 
 export function SiteNav() {
@@ -32,7 +35,11 @@ export function SiteNav() {
       )}
     >
       <div className="mx-auto flex h-full max-w-[980px] items-center justify-between px-5 text-[12px]">
-        <a href="#top" className="flex items-center gap-2 text-[#1d1d1f]" aria-label="Jeet home">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-[#1d1d1f]"
+          aria-label={`${siteConfig.fullName} home`}
+        >
           <Image
             src={assetPath("/bishwajeet-avatar-nav.webp")}
             alt=""
@@ -40,50 +47,44 @@ export function SiteNav() {
             height={44}
             className="h-[22px] w-[22px] rounded-full object-cover"
           />
-          <span className="text-[14px] font-semibold tracking-tight">Jeet</span>
-        </a>
+          <span className="text-[14px] font-semibold tracking-tight">
+            {siteConfig.nickname}
+          </span>
+        </Link>
 
         <nav
           aria-label="Primary"
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 md:flex"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-6 md:flex"
         >
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-[#1d1d1f]/80 transition hover:text-[#1d1d1f]"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3.5">
           <a
-            href="https://www.crio.do/learn/portfolio/bishwajeetk003/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-1 py-1 text-[12px] font-medium text-[#1d1d1f]/80 transition hover:text-[#1d1d1f]"
-          >
-            Crio
-          </a>
-          <a
             href="https://www.linkedin.com/in/bishwajeet-kumar-2b044a14a/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer me"
             className="inline-flex items-center gap-1.5 px-1 py-1 text-[12px] font-medium text-[#1d1d1f]/80 transition hover:text-[#1d1d1f]"
           >
             <IconBrandLinkedin className="h-3.5 w-3.5" />
-            LinkedIn
+            <span className="hidden sm:inline">LinkedIn</span>
           </a>
           <a
             href="https://github.com/github-bishwajeet"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer me"
             className="inline-flex items-center gap-1.5 rounded-full bg-[#1d1d1f] px-2.5 py-1 text-[12px] font-medium text-white transition hover:bg-black"
           >
             <IconBrandGithub className="h-3.5 w-3.5" />
-            GitHub
+            <span className="hidden sm:inline">GitHub</span>
           </a>
         </div>
       </div>

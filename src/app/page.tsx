@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteNav } from "@/components/portfolio/site-nav";
+import { SiteFooter } from "@/components/portfolio/site-footer";
 import { PromoBanner } from "@/components/portfolio/promo-banner";
 import { Hero } from "@/components/portfolio/hero";
 import { Work } from "@/components/portfolio/work";
@@ -9,17 +11,16 @@ import { About } from "@/components/portfolio/about";
 import { Contact } from "@/components/portfolio/contact";
 import { JsonLd } from "@/components/seo/json-ld";
 import { featuredProjects } from "@/data/portfolio";
-import { siteConfig, siteJsonLdGraph } from "@/lib/seo";
+import { createPageMetadata, siteConfig, siteJsonLdGraph } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: `${siteConfig.fullName} (Jeet) | ${siteConfig.jobTitle}`,
-  },
+export const metadata: Metadata = createPageMetadata({
+  title: `${siteConfig.fullName} (Jeet) | ${siteConfig.jobTitle}`,
   description: siteConfig.description,
-  alternates: {
-    canonical: "./",
-  },
-};
+  path: "/",
+  type: "profile",
+  image: siteConfig.ogImage,
+  imageAlt: siteConfig.ogImageAlt,
+});
 
 export default function Home() {
   const projectSchemaItems = featuredProjects.map((project) => ({
@@ -39,7 +40,24 @@ export default function Home() {
         <SkillsHub />
         <Experience />
         <About />
+        <section className="bg-[#f5f5f7] px-5 pb-10 text-center">
+          <div className="mx-auto flex max-w-[720px] flex-wrap items-center justify-center gap-6 text-[17px]">
+            <Link href="/about/" className="apple-link inline-flex items-center gap-1">
+              Full biography <span aria-hidden>›</span>
+            </Link>
+            <Link href="/experience/" className="apple-link inline-flex items-center gap-1">
+              Career timeline <span aria-hidden>›</span>
+            </Link>
+            <Link href="/articles/" className="apple-link inline-flex items-center gap-1">
+              Articles <span aria-hidden>›</span>
+            </Link>
+            <Link href="/contact/" className="apple-link inline-flex items-center gap-1">
+              Contact page <span aria-hidden>›</span>
+            </Link>
+          </div>
+        </section>
         <Contact />
+        <SiteFooter />
       </main>
     </>
   );

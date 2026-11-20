@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="bg5" x1="10" y1="0" x2="150" y2="160">
+      <stop stop-color="#E9FBF1"/>
+      <stop offset="1" stop-color="#CFF3DE"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="36" fill="url(#bg5)"/>
+  <ellipse cx="80" cy="132" rx="50" ry="9" fill="#86EFAC" opacity="0.45"/>
+  <!-- laptop -->
+  <rect x="36" y="42" width="88" height="58" rx="8" fill="#12B76A"/>
+  <rect x="44" y="50" width="72" height="40" rx="4" fill="#E9FBF1"/>
+  <rect x="28" y="100" width="104" height="10" rx="3" fill="#0E9F5A"/>
+  <rect x="60" y="102" width="40" height="4" rx="2" fill="#86EFAC"/>
+  <!-- reconnect ring -->
+  <circle cx="116" cy="116" r="22" fill="#fff"/>
+  <path d="M116 102a14 14 0 1 1-12.2 7" stroke="#12B76A" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M102 108h10v-10" stroke="#12B76A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- wifi bars on screen -->
+  <path d="M70 72c6-6 16-6 22 0" stroke="#12B76A" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M74 77c4-3.5 10-3.5 14 0" stroke="#86EFAC" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <circle cx="81" cy="82" r="2.5" fill="#12B76A"/>
+</svg>

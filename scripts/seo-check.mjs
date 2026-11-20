@@ -43,8 +43,12 @@ mustExist("index.html");
 mustExist("robots.txt");
 mustExist("sitemap.xml");
 mustExist("og-image.png");
-mustExist("bishwajeet-avatar.png");
+mustExist("bishwajeet-avatar.webp");
 mustExist("404.html");
+mustExist("about/index.html");
+mustExist("experience/index.html");
+mustExist("articles/index.html");
+mustExist("contact/index.html");
 
 const html = read("index.html");
 const robots = read("robots.txt");
@@ -124,10 +128,13 @@ else {
         if (node["@graph"]) collect(node["@graph"]);
       };
       collect(data);
-      for (const needed of ["Person", "WebSite", "ProfilePage"]) {
+      for (const needed of ["Person", "WebSite", "ProfilePage", "Organization"]) {
         if (![...types].some((t) => String(t).includes(needed))) {
           fail(`JSON-LD missing ${needed} schema`);
         }
+      }
+      if (!raw.includes(`${siteUrl}/#person`)) {
+        fail("Person @id should be stable at /#person");
       }
     } catch (e) {
       fail(`Invalid JSON-LD: ${e.message}`);
@@ -152,7 +159,21 @@ if (!robots.includes(`${siteUrl}/sitemap.xml`)) {
 // sitemap.xml
 if (!sitemap.includes("<urlset")) fail("sitemap.xml missing urlset");
 if (!sitemap.includes(`${siteUrl}/`)) fail(`sitemap.xml missing homepage ${siteUrl}/`);
+for (const path of ["/about/", "/experience/", "/articles/", "/contact/"]) {
+  if (!sitemap.includes(`${siteUrl}${path}`)) {
+    fail(`sitemap.xml missing ${siteUrl}${path}`);
+  }
+}
 if (/localhost|127\.0\.0\.1/i.test(sitemap)) fail("sitemap.xml contains localhost URLs");
+
+// Identity pages should exist and self-canonicalize
+for (const page of ["about", "experience", "articles", "contact"]) {
+  const pageHtml = read(`${page}/index.html`);
+  if (!/<title>/i.test(pageHtml)) fail(`${page}/index.html missing title`);
+  if (!new RegExp(`${siteUrl}/${page}/`, "i").test(pageHtml)) {
+    warn(`${page}/index.html may be missing canonical absolute URL`);
+  }
+}
 
 // 404 should not be in sitemap
 if (/404\.html|\/_not-found/i.test(sitemap)) fail("sitemap.xml should not include 404 routes");

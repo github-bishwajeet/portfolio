@@ -227,7 +227,7 @@ export function HeroFlip() {
           <div className="absolute inset-0 overflow-hidden rounded-full">
             <Image
               src={assetPath("/bishwajeet-avatar.webp")}
-              alt="Jeet, Bishwajeet Kumar"
+              alt="Bishwajeet Kumar (Jeet), Senior Software Engineer"
               width={840}
               height={840}
               sizes="(max-width: 768px) 80vw, 420px"

@@ -11,8 +11,8 @@ export function Contact() {
           Let&apos;s talk.
         </h2>
         <p className="mx-auto mt-4 max-w-[520px] text-[19px] leading-[1.55] font-normal text-[#a1a1a6] md:text-[21px] md:leading-[1.6]">
-          Best for product teams hiring Jeet (Bishwajeet Kumar) as a senior fullstack engineer.
-          Also open to a few well scoped collaborations.
+          Best for product teams hiring Jeet (Bishwajeet Kumar) as a senior
+          software engineer. Also open to a few well scoped collaborations.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

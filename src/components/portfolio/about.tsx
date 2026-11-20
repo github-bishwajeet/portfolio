@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import { strengths, stack } from "@/data/portfolio";
 
@@ -20,6 +21,11 @@ export function About() {
           <p className="mt-4 text-[19px] leading-snug font-semibold text-[#86868b] md:text-[21px]">
             Colleagues call him Jeet. He builds distributed systems, microservices,
             and queued workloads across AI products and multi sided platforms.
+          </p>
+          <p className="mt-5">
+            <Link href="/about/" className="apple-link text-[17px]">
+              Read the full biography ›
+            </Link>
           </p>
         </motion.div>
 

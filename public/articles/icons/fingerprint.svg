@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="20" y1="10" x2="150" y2="150">
+      <stop stop-color="#F6ECFF"/>
+      <stop offset="1" stop-color="#E5D4FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="36" fill="url(#bg2)"/>
+  <ellipse cx="80" cy="128" rx="48" ry="9" fill="#D4B8FF" opacity="0.5"/>
+  <!-- character card -->
+  <rect x="34" y="36" width="58" height="78" rx="14" fill="#fff"/>
+  <circle cx="63" cy="62" r="16" fill="#9B5CFF"/>
+  <path d="M42 104c0-12 9.4-20 21-20s21 8 21 20" fill="#C49BFF"/>
+  <rect x="48" y="108" width="30" height="5" rx="2.5" fill="#E5D4FF"/>
+  <!-- linked clone / variant -->
+  <rect x="86" y="52" width="42" height="56" rx="12" fill="#fff" opacity="0.95"/>
+  <circle cx="107" cy="70" r="11" fill="#B794F6"/>
+  <path d="M93 100c0-8 6.3-14 14-14s14 6 14 14" fill="#D4B8FF"/>
+  <!-- sync arrows -->
+  <path d="M74 48c18-10 36 2 36 14" stroke="#7A3FE0" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M104 56l8-2-2 8" stroke="#7A3FE0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M114 108c-18 10-36-2-36-14" stroke="#A78BFA" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M84 100l-8 2 2-8" stroke="#A78BFA" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="bg7" x1="0" y1="0" x2="140" y2="160">
+      <stop stop-color="#FFF8EB"/>
+      <stop offset="1" stop-color="#FFE4B0"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="36" fill="url(#bg7)"/>
+  <ellipse cx="80" cy="132" rx="50" ry="9" fill="#F5C56B" opacity="0.45"/>
+  <!-- original user -->
+  <circle cx="52" cy="56" r="16" fill="#F5A524"/>
+  <path d="M28 104c0-14 10.8-24 24-24s24 10 24 24" fill="#F5A524"/>
+  <!-- admin / impersonator overlay -->
+  <circle cx="98" cy="48" r="14" fill="#E8890C"/>
+  <path d="M78 90c0-11 9-19 20-19s20 8 20 19" fill="#E8890C"/>
+  <!-- shield lock -->
+  <path d="M108 96l18 6v14c0 10-7 18-18 21-11-3-18-11-18-21V102l18-6Z" fill="#B45309"/>
+  <rect x="101" y="112" width="14" height="12" rx="2" fill="#FFF8EB"/>
+  <path d="M104 112v-4a5 5 0 0 1 10 0v4" stroke="#FFF8EB" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- id tag -->
+  <rect x="34" y="40" width="20" height="10" rx="5" fill="#fff"/>
+  <text x="38" y="48" fill="#B45309" font-size="7" font-family="system-ui,sans-serif" font-weight="700">YOU</text>
+</svg>

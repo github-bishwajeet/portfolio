@@ -3,3 +3,9 @@
 
 # Avoid 404 HTML if a crawler requests a trailing slash on the sitemap
 /sitemap.xml/ /sitemap.xml 301
+
+# Legacy hash destinations → dedicated identity routes
+/about /about/ 301
+/experience /experience/ 301
+/contact /contact/ 301
+/articles /articles/ 301
