@@ -41,7 +41,7 @@ export default function Home() {
         <SkillsHub />
         <Experience />
         <About />
-        <section className="bg-[#f5f5f7] px-5 pb-10 text-center">
+        <section className="bg-[#f5f5f7] px-5 py-10 text-center md:py-12">
           <div className="mx-auto flex max-w-[720px] flex-wrap items-center justify-center gap-6 text-[17px]">
             <Link href="/about/" className="apple-link inline-flex items-center gap-1">
               Full biography <span aria-hidden>›</span>

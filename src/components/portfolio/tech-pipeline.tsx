@@ -544,8 +544,8 @@ export function TechPipeline() {
   const reduced = useReducedMotion();
 
   return (
-    <div className="mx-auto w-full max-w-[1100px]">
-      <div className="mb-6 text-center">
+    <div className="mx-auto w-full max-w-[1240px]">
+      <div className="mb-6 px-5 text-center md:px-0">
         <p className="text-[14px] font-medium tracking-[0.08em] text-[#6e6e73] uppercase">
           Jeet&apos;s stack
         </p>
@@ -555,12 +555,13 @@ export function TechPipeline() {
         </p>
       </div>
 
-      <div className="overflow-x-auto rounded-[28px] border border-[#e8e8ed] bg-[#fbfbfd] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div className="w-full overflow-hidden md:rounded-[28px] md:border md:border-[#e8e8ed] md:bg-[#fbfbfd]">
         <svg
           viewBox={`0 0 ${VB.w} ${VB.h}`}
-          className="h-auto min-w-[920px] w-full"
+          className="h-auto w-full max-w-full"
           role="img"
           aria-label="Technology architecture pipeline diagram"
+          preserveAspectRatio="xMidYMid meet"
         >
           <defs>
             <filter id="nodeShadow" x="-20%" y="-20%" width="140%" height="140%">

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { TechPipeline } from "@/components/portfolio/tech-pipeline";
 
 const pillars = [
@@ -14,7 +14,7 @@ const pillars = [
   },
   {
     title: "Queuing & async",
-    body: "Redis and job queues for media pipelines, webhooks, notifications, and long running work that should never block the request path.",
+    body: "Redis and job queues for media pipelines, webhooks, notifications, and long running work off the request path.",
   },
   {
     title: "Integrations",
@@ -23,45 +23,53 @@ const pillars = [
 ];
 
 export function SkillsHub() {
+  const reduced = useReducedMotion();
+
   return (
-    <section id="skills" className="bg-white px-5 py-20 md:py-28">
-      <div className="mx-auto max-w-[980px]">
+    <section id="skills" className="bg-[#f5f5f7] pt-20 pb-20 md:pt-28 md:pb-28">
+      <div className="mx-auto max-w-[1240px] px-5 pb-40 md:pb-56">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={reduced ? false : { opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.55 }}
-          className="text-center"
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="mx-auto max-w-[620px] text-center"
         >
-          <h2 className="apple-headline text-[40px] text-[#1d1d1f] md:text-[56px]">
+          <h2 className="apple-headline text-[40px] leading-[1.05] text-[#1d1d1f] md:text-[56px]">
             Systems that scale.
           </h2>
-          <p className="mx-auto mt-3 max-w-[560px] text-[19px] font-semibold text-[#86868b] md:text-[21px]">
+          <p className="mt-4 text-[17px] leading-[1.6] font-normal text-[#6e6e73] md:text-[19px]">
             How Jeet designs services, queues, and integrations for real load.
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2">
+        <motion.ul
+          initial={reduced ? false : { opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.5, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-0"
+        >
           {pillars.map((item, index) => (
-            <motion.article
+            <li
               key={item.title}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ delay: index * 0.05, duration: 0.45 }}
-              className="rounded-[28px] bg-[#f5f5f7] px-8 py-9"
+              className={`text-center sm:text-left lg:px-5 ${
+                index > 0 ? "lg:border-l lg:border-[#d2d2d7]/80" : ""
+              }`}
             >
-              <h3 className="text-[24px] font-semibold tracking-tight text-[#1d1d1f]">
+              <h3 className="text-[17px] font-semibold tracking-tight text-[#1d1d1f] md:text-[18px]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-[17px] leading-relaxed text-[#86868b]">{item.body}</p>
-            </motion.article>
+              <p className="mt-2 text-[14px] leading-relaxed text-[#6e6e73] md:text-[15px]">
+                {item.body}
+              </p>
+            </li>
           ))}
-        </div>
+        </motion.ul>
+      </div>
 
-        <div className="mt-16">
-          <TechPipeline />
-        </div>
+      <div className="w-full md:mx-auto md:max-w-[1240px] md:px-5">
+        <TechPipeline />
       </div>
     </section>
   );
